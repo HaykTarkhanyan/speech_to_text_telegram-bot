@@ -152,6 +152,7 @@ The user with ID `987654321` can now send voice messages to the bot.
 ```
 .
 ├── bot.py            # Main bot code
+├── Dockerfile        # Container image definition
 ├── requirements.txt  # Python dependencies
 ├── .env.example      # Environment variable template
 ├── .env              # Your secrets (never committed)
@@ -163,5 +164,5 @@ The user with ID `987654321` can now send voice messages to the bot.
 ## Security Notes
 
 - `.env` and `whitelist.json` are listed in `.gitignore` — never commit them.
-- Only the `ADMIN_USER_ID` can modify the whitelist; all other users are rejected silently.
+- Only the `ADMIN_USER_ID` can modify the whitelist; non-admin users attempting to use admin commands will receive an authorisation error from the bot.
 - The Gemini File API deletes uploaded audio automatically after 48 hours; the bot also requests immediate deletion after transcription.
