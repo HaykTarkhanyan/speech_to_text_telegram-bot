@@ -1,6 +1,6 @@
 # speech_to_text_telegram-bot
 
-A Telegram bot that transcribes voice messages and audio files using OpenAI's Whisper API.
+A Telegram bot that transcribes Armenian voice messages using Google's Gemini API. Reports cost per transcription.
 
 ## Setup
 
@@ -11,7 +11,7 @@ A Telegram bot that transcribes voice messages and audio files using OpenAI's Wh
 
 2. Copy `.env.example` to `.env` and fill in your keys:
    - `TELEGRAM_BOT_TOKEN` — get one from [@BotFather](https://t.me/BotFather)
-   - `OPENAI_API_KEY` — from [OpenAI](https://platform.openai.com/api-keys)
+   - `GEMINI_API_KEY` — from [Google AI Studio](https://aistudio.google.com/apikey)
 
 3. Run the bot:
    ```
@@ -20,4 +20,4 @@ A Telegram bot that transcribes voice messages and audio files using OpenAI's Wh
 
 ## Usage
 
-Send a voice message or audio file to the bot and it will reply with the transcription.
+Send a voice message or audio file to the bot and it will reply with the transcription and cost breakdown.
